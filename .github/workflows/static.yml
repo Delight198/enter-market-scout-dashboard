@@ -1,7 +1,6 @@
-
 name: Publish Market Scout Dashboard
 
-'on':
+on:
   push:
     branches:
       - main
@@ -26,10 +25,10 @@ jobs:
       - name: Get dashboard files
         uses: actions/checkout@v4
 
-           - name: Configure GitHub Pages
-             uses: actions/configure-pages@v5
-             with:
-               enablement: true 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload dashboard
         uses: actions/upload-pages-artifact@v3
